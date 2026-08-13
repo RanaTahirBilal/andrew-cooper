@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Andrew Charles Cooper — overrides on the MegaOne celebrity demo.
+   Aviation navy + brass. Serif display face.
+   ========================================================================== */
+:root{
+  --ac-navy:#0d1f35;
+  --ac-navy-2:#14202f;
+  --ac-brass:#c9a227;
+  --ac-brass-2:#dfc05a;
+  --ac-ease:cubic-bezier(.22,.61,.36,1);
+}
+
+h1,h2,h3,h4,h5,.heading,.card-title{
+  font-family:'Source Serif 4',Georgia,'Times New Roman',serif !important;
+  font-weight:400 !important;
+}
+
+/* ---------- reveal: neutralise WOW's re-hiding, drive it from ac-reveal.js ---------- */
+.wow{ visibility:visible !important; animation-name:none !important; }
+.ac-anim .wow{
+  opacity:0; transform:translateY(22px);
+  transition:opacity .85s var(--ac-ease), transform .85s var(--ac-ease);
+}
+.ac-anim .wow.ac-in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){
+  .ac-anim .wow{ opacity:1 !important; transform:none !important; }
+}
+
+/* ---------- wordmark ---------- */
+.ac-wordmark{ display:block; line-height:1.2; }
+.ac-wordmark b{
+  display:block; font-family:'Source Serif 4',serif; font-weight:600;
+  font-size:19px; color:#fff; letter-spacing:.005em;
+}
+.ac-wordmark small{
+  display:block; font-size:9px; font-weight:600; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--ac-brass-2); margin-top:2px;
+}
+.ac-side-mono{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:74px; height:74px; border-radius:14px; color:#fff; font-weight:700;
+  font-size:25px; letter-spacing:.03em;
+  background:linear-gradient(140deg,var(--ac-brass) 0%,#8f7314 100%);
+}
+
+/* ---------- banner ---------- */
+.banner-section .rectangle .text p:first-child{
+  color:var(--ac-brass-2) !important; letter-spacing:.18em; text-transform:uppercase;
+  font-size:11px; font-weight:600;
+}
+.banner-section .rectangle .text h2{ letter-spacing:-.02em; }
+
+/* ---------- about facts ---------- */
+.ac-facts{ list-style:none; margin:26px 0 0; padding:0; }
+.ac-facts li{
+  padding:14px 0; border-top:1px solid rgba(13,31,53,.14);
+  font-size:14.5px; color:var(--ac-navy); text-align:left;
+}
+.ac-facts li:last-child{ border-bottom:1px solid rgba(13,31,53,.14); }
+.ac-facts b{
+  display:block; font-size:10.5px; font-weight:700; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--ac-brass); margin-bottom:3px;
+  font-family:'Poppins','Montserrat',sans-serif;
+}
+
+/* ---------- career cards ---------- */
+.ac-eras{ padding:82px 15px 10px; }
+.ac-era{
+  background:#fff; border:1px solid rgba(13,31,53,.10); border-radius:3px;
+  padding:34px 30px; height:100%; position:relative; overflow:hidden; text-align:left;
+  transition:transform .45s var(--ac-ease), box-shadow .45s var(--ac-ease);
+}
+.ac-era::after{
+  content:''; position:absolute; left:0; top:0; width:0; height:3px;
+  background:var(--ac-brass); transition:width .5s var(--ac-ease);
+}
+.ac-era:hover{ transform:translateY(-6px); box-shadow:0 24px 56px rgba(13,31,53,.14); }
+.ac-era:hover::after{ width:100%; }
+.ac-era.is-now{ background:var(--ac-navy); }
+.ac-era.is-now h3{ color:#fff; }
+.ac-era.is-now p{ color:rgba(255,255,255,.72); }
+.ac-era.is-now .ac-era-where{ color:rgba(255,255,255,.6); }
+.ac-era-when{
+  display:block; font-size:11px; font-weight:700; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--ac-brass); margin-bottom:10px;
+}
+.ac-era h3{ font-size:1.3rem; margin-bottom:6px; color:var(--ac-navy); }
+.ac-era-where{
+  display:block; font-size:11.5px; font-weight:600; letter-spacing:.04em;
+  text-transform:uppercase; color:#4a5566; margin-bottom:15px;
+}
+.ac-era p{ font-size:14.5px; line-height:1.85; color:#5a636c; margin:0; }
+
+/* ---------- boards ---------- */
+.ac-boards{ margin-top:56px; }
+.ac-sub{
+  font-size:12.5px !important; font-weight:600 !important; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--ac-navy); margin-bottom:20px;
+  font-family:'Poppins','Montserrat',sans-serif !important;
+}
+.ac-boards ul{ display:flex; flex-wrap:wrap; gap:12px; list-style:none; margin:0; padding:0; }
+.ac-boards li{
+  display:flex; align-items:center; gap:12px; padding:16px 24px;
+  border:1px solid rgba(13,31,53,.13); border-radius:3px; background:#fff; text-align:left;
+  transition:border-color .35s var(--ac-ease), transform .35s var(--ac-ease);
+}
+.ac-boards li:hover{ border-color:var(--ac-brass); transform:translateY(-3px); }
+.ac-boards i{ color:var(--ac-brass); font-size:18px; }
+.ac-boards span{ font-size:14.5px; color:var(--ac-navy); font-weight:500; }
+.ac-boards small{
+  display:block; font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+  color:#6a737c; font-weight:600; margin-top:2px;
+}
+
+/* ---------- contact ---------- */
+.ac-submit{ border:none; cursor:pointer; }
+.contact-section .form-control{ border-radius:2px; }
+.ac-source{ padding:26px 15px 0; }
+.ac-source p{ font-size:12px; color:rgba(255,255,255,.55); margin:0; }
+.ac-source a{ color:var(--ac-brass-2); }
+
+@media (max-width:991px){
+  .ac-eras{ padding:56px 15px 0; }
+  .ac-era{ margin-bottom:22px; }
+  .ac-boards li{ width:100%; }
+}
+
+/* the demo's press cards sit on a negative offset; keep the boards row clear of them */
+.media-section .cards-section{ position:relative; z-index:2; }
+.ac-boards{ margin-top:150px !important; position:relative; z-index:1; clear:both; }
+@media (max-width:991px){ .ac-boards{ margin-top:60px !important; } }
