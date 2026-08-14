@@ -39,7 +39,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #0d1f35;
+	background: #3B2A1F;
 	width: 0;
 	height: 25%;
 	transition: .5s ease;
@@ -65,7 +65,7 @@ a {
 
 /*Headings*/
 .subheading {
-	color: #0d1f35;
+	color: #3B2A1F;
 	font-size: 24px;
 	text-align: center;
 	font-weight: 600;
@@ -111,7 +111,7 @@ a {
 
 .icon-hovr:hover {
 	background-color: #fff;
-	color: #0d1f35;
+	color: #3B2A1F;
 }
 
 /*Button*/
@@ -124,7 +124,7 @@ a {
 	position: absolute;
 	line-height: inherit;
 	display: inline-block;
-	color: #14202f;
+	color: #2E2118;
 	border: 2px solid transparent;
 	text-transform: capitalize;
 	transition: all .5s ease !important;
@@ -133,7 +133,7 @@ a {
 .btn.button {
 	font-size: 12px !important;
 	font-weight: 600;
-	color: #14202f;
+	color: #2E2118;
 	padding: 9px 27px !important;
 	line-height: 1.8em !important;
 	cursor: pointer;
@@ -155,8 +155,8 @@ a {
 
 .btn.red-btn {
 	background: #fff;
-	border-color: #0d1f35;
-	color: #0d1f35;
+	border-color: #3B2A1F;
+	color: #3B2A1F;
 }
 
 .center-button {
@@ -167,12 +167,12 @@ a {
 .btn.btn-hvr-white:hover {
 	background-color: #fff;
 	border-color: #fff;
-	color: #0d1f35;
+	color: #3B2A1F;
 }
 
 .btn.btn-hvr-red:hover {
-	background-color: #0d1f35;
-	border-color: #0d1f35;
+	background-color: #3B2A1F;
+	border-color: #3B2A1F;
 	color: #fff;
 }
 
@@ -208,7 +208,7 @@ a {
 .container3>div {
 	width: 20px;
 	height: 20px;
-	border: 6px solid #0d1f35;
+	border: 6px solid #3B2A1F;
 	background-color: #000;
 	border-radius: 100%;
 	position: absolute;
@@ -379,7 +379,7 @@ a {
 	transition: none;
 }
 .navbar-fixed-top.scrolled .sidemenu_btn:hover{
-	background-color: #0d1f35;
+	background-color: #3B2A1F;
 	transition: all .5s ease;
 }
 
@@ -689,7 +689,7 @@ a {
 	top: 0;
 	width: 340px;
 	height: 610px;
-	background-color: #0d1f35;
+	background-color: #3B2A1F;
 }
 
 .banner-section .social-icons-simple {
@@ -807,11 +807,11 @@ a {
 .about-section .media i {
 	overflow: hidden;
 	border-radius: 50%;
-	color: #0d1f35;
+	color: #3B2A1F;
 	height: 30px;
 	line-height: 28px;
 	width: 30px;
-	border: 1px solid #0d1f35;
+	border: 1px solid #3B2A1F;
 	text-align: center;
 	font-size: 18px;
 	transition: .5s ease;
@@ -826,13 +826,13 @@ a {
 
 .about-section .media .media-body {
 	margin-left: 10px;
-	color: #0d1f35;
+	color: #3B2A1F;
 }
 
 .about-section .media:hover i {
 	color: #fff;
-	border: 1px solid #0d1f35;
-	background-color: #0d1f35;
+	border: 1px solid #3B2A1F;
+	background-color: #3B2A1F;
 	transition: .5s ease;
 }
 
@@ -851,7 +851,7 @@ a {
 	width: 350px;
 	height: 400px;
 	position: absolute;
-	background-color: #0d1f35;
+	background-color: #3B2A1F;
 }
 
 /* ===================================
@@ -872,7 +872,7 @@ a {
 	width: 320px;
 	height: 400px;
 	position: absolute;
-	background-color: #0d1f35;
+	background-color: #3B2A1F;
 }
 
 .project-section .rectangle .project-text {
@@ -925,13 +925,13 @@ a {
 }
 
 .media-section .cards-section .card-body .card-title {
-	color: #0d1f35;
+	color: #3B2A1F;
 	font-size: 24px;
 	margin-bottom: 25px;
 }
 
 .media-section .cards-section .active {
-	background-color: #0d1f35;
+	background-color: #3B2A1F;
 }
 
 .media-section .cards-section .active .card-title {
@@ -1045,15 +1045,15 @@ a {
 	color: #000;
 	font-size: 14px;
 	transition: border .9s ease;
-	border-bottom: 1px solid #14202f;
+	border-bottom: 1px solid #2E2118;
 }
 
 .contact-form .form-control::placeholder {
-	color: #14202f;
+	color: #2E2118;
 }
 
 .form-control:focus {
-	color: #14202f;
+	color: #2E2118;
 	box-shadow: 0 0 0 0.0rem transparent;
 }
 
@@ -1076,7 +1076,7 @@ a {
 	right: 0;
 	width: 450px;
 	height: 500px;
-	background-color: #0d1f35;
+	background-color: #3B2A1F;
 }
 
 .contact-section .copyright-section {
@@ -1109,7 +1109,7 @@ a {
 	width: 324px;
 	height: 400px;
 	position: absolute;
-	background-color: #0d1f35;
+	background-color: #3B2A1F;
 }
 
 .header .social-icons-simple {
@@ -1244,7 +1244,7 @@ a {
 	position: absolute;
 	transition: all 0.3s ease;
 	opacity: 0;
-	background-color: #0d1f35;
+	background-color: #3B2A1F;
 }
 
 .hover-effect:hover .overlay {
@@ -1257,7 +1257,7 @@ a {
 	top: 0;
 	right: 0;
 	cursor: pointer;
-	background-color: #0d1f35;
+	background-color: #3B2A1F;
 }
 
 .hover-effect:hover .overlayBottom {
@@ -1685,12 +1685,12 @@ a {
 		color: #000;
 	}
 	.project-section .btn.white-btn {
-		border-color: #0d1f35;
-		color: #0d1f35;
+		border-color: #3B2A1F;
+		color: #3B2A1F;
 	}
 	.project-section .btn.btn-hvr-white:hover{
-		border-color: #0d1f35;
-		background-color: #0d1f35;
+		border-color: #3B2A1F;
+		background-color: #3B2A1F;
 		color: #fff;
 	}
 
