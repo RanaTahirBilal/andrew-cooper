@@ -129,3 +129,141 @@ h1,h2,h3,h4,h5,.heading,.card-title{
 .media-section .cards-section{ position:relative; z-index:2; }
 .ac-boards{ margin-top:150px !important; position:relative; z-index:1; clear:both; }
 @media (max-width:991px){ .ac-boards{ margin-top:60px !important; } }
+
+/* ==========================================================================
+   RESPONSIVE FIXES
+   The celebrity demo pins the hero panel to fixed pixel widths (340px, then
+   768px, then 375px) and absolutely positions the copy and social icons
+   inside it. Below ~400px that panel is wider than the screen and clips the
+   text; above it, it leaves a dead gutter. Everything below makes the hero
+   flow instead of being pinned.
+   ========================================================================== */
+
+@media (max-width: 991px){
+  .banner-section{
+    height:auto !important;
+    min-height:0 !important;
+    margin-bottom:0 !important;
+    padding-top:58vw;              /* photo strip above the panel */
+    padding-bottom:0;
+    background-position:center top;
+  }
+  .banner-section .container{ padding-left:0; padding-right:0; max-width:none; }
+
+  .banner-section .rectangle{
+    position:relative !important;
+    top:0 !important; left:0 !important; right:0 !important;
+    width:100% !important; height:auto !important;
+    padding:42px 22px 30px;
+  }
+  .banner-section .rectangle .text{
+    position:static !important; bottom:auto !important; left:auto !important;
+    text-align:center;
+  }
+  .banner-section .rectangle .text h2{
+    font-size:clamp(1.85rem, 8.4vw, 2.7rem) !important;
+    line-height:1.12; margin:10px 0 14px;
+  }
+  .banner-section .rectangle .text p{ padding-right:0 !important; }
+  .banner-section .rectangle .text p:first-child{ font-size:10.5px; }
+  .banner-section .rectangle .media{ justify-content:center; margin-top:22px; }
+
+  .banner-section .social-icons{
+    position:static !important; left:auto !important; bottom:auto !important;
+    transform:none !important; padding:0 22px 34px; background:var(--ac-navy);
+  }
+  .banner-section .social-icons ul{
+    display:flex; justify-content:center; gap:10px; margin:0; padding:0;
+  }
+}
+
+/* very small handsets: nothing may exceed the viewport */
+@media (max-width: 400px){
+  .banner-section{ padding-top:64vw; }
+  .banner-section .rectangle{ padding:34px 16px 26px; }
+  .banner-section .rectangle .text h2{ font-size:1.75rem !important; }
+  .ac-eras{ padding-left:0; padding-right:0; }
+}
+
+/* the navbar wordmark was flush against the screen edge */
+.navbar .navbar-brand{ padding-left:18px; }
+@media (min-width: 992px){ .navbar .navbar-brand{ padding-left:26px; } }
+
+/* legibility floor: nothing below 11px */
+.ac-wordmark small{ font-size:10.5px; letter-spacing:.18em; }
+.ac-boards small{ font-size:11px; }
+.ac-source p{ font-size:12.5px; }
+
+/* touch targets: 44px minimum on anything tappable */
+@media (hover: none), (max-width: 1024px){
+  .navbar-nav .nav-link,
+  .side-nav .nav-link{ padding-top:12px; padding-bottom:12px; min-height:44px; display:flex; align-items:center; }
+  .sidemenu_btn{
+    width:44px !important; height:44px !important;
+    display:flex !important; flex-direction:column; justify-content:center; align-items:center; gap:5px;
+  }
+  .social-icons-simple li a,
+  .side-menu-footer .banner-icons ul li a{ min-width:44px; min-height:44px; line-height:42px; }
+  .banner-section .media i{ height:44px; width:44px; line-height:42px; font-size:18px; }
+  .contact-section .form-control{ min-height:46px; }
+  .ac-submit{ min-height:48px; }
+  .carousel-control-prev, .carousel-control-next{ width:56px; }
+}
+
+/* landscape phones: the hero photo strip must not eat the whole screen */
+@media (max-width: 991px) and (orientation: landscape) and (max-height: 500px){
+  .banner-section{ padding-top:34vh; }
+  .banner-section .rectangle .text h2{ font-size:1.9rem !important; }
+}
+
+/* --- decorative navy blocks are fixed-width too; cap them to the viewport --- */
+@media (max-width: 991px){
+  .about-section .rectangle,
+  .contact-section .rectangle{
+    width:min(78vw, 350px) !important;
+    max-width:calc(100vw - 40px) !important;
+    right:0 !important; left:auto !important;
+  }
+  .project-section .rectangle{
+    position:relative !important;
+    left:0 !important; right:auto !important; top:0 !important;
+    width:100% !important; height:auto !important;
+    padding:38px 22px;
+  }
+  .project-section .rectangle .project-text{
+    position:static !important; left:auto !important; top:auto !important;
+    text-align:center;
+  }
+  .project-section .rectangle .project-text h2{ font-size:clamp(1.6rem,7vw,2.2rem); }
+  .project-section .rectangle .project-text br{ display:none; }
+}
+
+/* --- bootstrap rows inside my own full-width sections were adding 30px --- */
+@media (max-width: 991px){
+  .ac-eras{ padding-left:15px !important; padding-right:15px !important; }
+  .ac-eras > .row,
+  .ac-boards > .row,
+  .media-section .ac-boards{ margin-left:0 !important; margin-right:0 !important; }
+  .ac-eras > .row > [class*="col-"],
+  .ac-boards > [class*="col-"]{ padding-left:0 !important; padding-right:0 !important; }
+}
+
+/* --- legibility floor and the last small tap target --- */
+.ac-wordmark small{ font-size:11px; }
+.banner-section .rectangle .text p:first-child{ font-size:11px !important; }
+.ac-source a{ display:inline-block; padding:6px 2px; }
+.side-menu .sidemenu-image a{ display:inline-block; padding:8px; }
+
+/* the photo strip meets the navy panel on a hard seam; blend it */
+@media (max-width: 991px){
+  .banner-section{ position:relative; background-color:var(--ac-navy); }
+  .banner-section::after{
+    content:''; position:absolute; left:0; right:0; top:0; height:58vw;
+    background:linear-gradient(to bottom, rgba(13,31,53,0) 52%, rgba(13,31,53,.55) 82%, var(--ac-navy) 100%);
+    pointer-events:none; z-index:0;
+  }
+  .banner-section .container, .banner-section .social-icons{ position:relative; z-index:1; }
+}
+@media (max-width: 400px){
+  .banner-section::after{ height:64vw; }
+}
