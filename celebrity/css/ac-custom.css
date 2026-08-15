@@ -368,3 +368,115 @@ body{ background:var(--ac-bg); }
 @media (max-width: 1200px){
   .navbar{ background-color:var(--ac-navy) !important; }
 }
+
+/* ==========================================================================
+   UI/UX PASS
+   ========================================================================== */
+
+/* --- the name is now an h1; keep the banner's visual scale --- */
+.banner-section .rectangle .text h1{
+  font-size:80px; color:#fff; font-weight:600; margin:0 0 10px;
+  font-family:'Source Serif 4',Georgia,serif; letter-spacing:-.02em; line-height:1.05;
+}
+@media (max-width:1200px){ .banner-section .rectangle .text h1{ font-size:55px; } }
+@media (max-width:991px){
+  .banner-section .rectangle .text h1{
+    font-size:clamp(1.85rem, 8.4vw, 2.7rem) !important; line-height:1.12; margin:10px 0 14px;
+  }
+}
+@media (max-width:400px){ .banner-section .rectangle .text h1{ font-size:1.75rem !important; } }
+
+/* --- skip link: the first thing a keyboard user meets --- */
+.ac-skip{
+  position:absolute; left:16px; top:-60px; z-index:2000;
+  background:var(--ac-navy); color:#fff; padding:12px 20px; border-radius:3px;
+  font-size:14px; font-weight:600; text-decoration:none;
+  transition:top .2s var(--ac-ease);
+}
+.ac-skip:focus{ top:16px; color:#fff; outline:3px solid var(--ac-brass-2); outline-offset:2px; }
+
+/* --- visible focus. The demo removes outlines everywhere; 27 of 32 focusable
+       elements had no indicator at all. --- */
+/* bundle.min.css ships `a:focus,button:focus,input:focus{outline:0}` plus an
+   `outline:0!important` rule, so the indicator needs matching weight. */
+html body a:focus-visible,
+html body button:focus-visible,
+html body input:focus-visible,
+html body select:focus-visible,
+html body textarea:focus-visible,
+html body [tabindex]:focus-visible,
+html body .nav-link:focus-visible,
+html body .navbar-brand:focus-visible,
+html body .btn:focus-visible,
+html body .media:focus-visible,
+html body .carousel-control-prev:focus-visible,
+html body .carousel-control-next:focus-visible{
+  /* longhands, not the shorthand: `outline: 3px solid var(--x)` becomes a
+     pending-substitution value and loses to the vendor reset */
+  outline-width:3px !important;
+  outline-style:solid !important;
+  outline-color:#9A5B2D !important;
+  outline-offset:3px !important;
+  border-radius:2px;
+}
+html body .banner-section a:focus-visible,
+html body .navbar a:focus-visible,
+html body .navbar button:focus-visible,
+html body .side-menu a:focus-visible,
+html body .side-menu button:focus-visible,
+html body .ac-era.is-now a:focus-visible,
+html body .media-section .card.active.selected a:focus-visible{
+  outline-color:#D6A268 !important;
+}
+.contact-section .form-control:focus-visible{ outline-offset:0; }
+
+/* --- anchor targets must clear the fixed header --- */
+section[id], main[id]{ scroll-margin-top:104px; }
+@media (max-width:991px){ section[id], main[id]{ scroll-margin-top:88px; } }
+
+/* --- form: labels are visible now, not placeholder-only --- */
+.contact-section .form-group label{
+  display:block; margin-bottom:7px;
+  font-size:11.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  color:#6B5B4C;
+}
+.ac-opt{
+  font-weight:500; letter-spacing:.04em; text-transform:none;
+  color:#6B5B4C; font-size:11px;
+}
+.ac-help{
+  font-size:12.5px; color:#6B5B4C; margin:8px 0 0; line-height:1.6;
+}
+.contact-section .form-control::placeholder{ color:#A0938A; opacity:1; }
+.contact-section .form-control:invalid:not(:placeholder-shown){ border-color:#B4472F; }
+
+/* --- carousel: no autoplay, so make the controls obvious --- */
+.carousel-control-prev, .carousel-control-next{ opacity:.85; }
+.carousel-control-prev:hover, .carousel-control-next:hover{ opacity:1; }
+.carousel:focus-visible{ outline:3px solid var(--ac-brass-2); outline-offset:-3px; }
+
+/* --- the drawer toggle is a <button> now, not a link --- */
+button.sidemenu_btn{ background:transparent; border:0; padding:0; cursor:pointer; }
+
+/* --- focus ring, final say ---
+   The outline longhands were still being clobbered somewhere in the vendor
+   bundle. box-shadow is not reset anywhere in this stack, so the indicator
+   is drawn with a ring instead and is guaranteed to render. */
+html body *:focus-visible{
+  box-shadow:0 0 0 3px #FBF8F4, 0 0 0 6px #9A5B2D !important;
+  border-radius:3px;
+  position:relative;
+  z-index:5;
+}
+html body .navbar *:focus-visible,
+html body .side-menu *:focus-visible,
+html body .banner-section *:focus-visible,
+html body .ac-era.is-now *:focus-visible,
+html body .media-section .card.active.selected *:focus-visible,
+html body .project-section *:focus-visible{
+  box-shadow:0 0 0 3px #3B2A1F, 0 0 0 6px #D6A268 !important;
+}
+html body .contact-section .form-control:focus-visible{
+  box-shadow:0 0 0 3px rgba(154,91,45,.22) !important;
+  border-radius:2px;
+}
