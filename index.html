@@ -33,7 +33,13 @@
    <script type="application/ld+json">
    {"@context":"https://schema.org","@type":"Person","name":"Andrew Charles Cooper","jobTitle":"Attorney","url":"https://ranatahirbilal.github.io/andrew-cooper/","address":{"@type":"PostalAddress","addressLocality":"Louisville","addressRegion":"KY","addressCountry":"US"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The George Washington University"},{"@type":"CollegeOrUniversity","name":"Emory University School of Law"}],"knowsAbout":["Patent Litigation","Intellectual Property","Aviation Law","Federal Practice","Strategic Transactions","Open Source Licensing"]}
    </script>
-   </head>
+   <style>
+/* Contact form removed until the client's address is confirmed; keep the section's original proportions. */
+@media (min-width:992px){#contact .form-section{min-height:907px}}
+@media (min-width:992px) and (max-width:1199px){#contact .form-section{min-height:980px}}
+@media (max-width:991px){#contact .rectangle{display:none}#contact .ac-pending{margin-bottom:.5rem}}
+</style>
+</head>
 
 <body data-offset="90" data-spy="scroll" data-target=".navbar">
 <a class="ac-skip" href="#main">Skip to content</a>
@@ -309,53 +315,11 @@
          <div class="col-lg-6 col-md-12 col-sm-12 form-section wow fadeInLeft" data-wow-delay="300ms">
             <p class="subheading">Let&rsquo;s Get In Touch</p>
             <h2 class="heading">Contact Andrew</h2>
-            <form class="contact-form" action="https://formsubmit.co/tahirbilal16@gmail.com" method="POST">
-               <input type="hidden" name="_subject" value="New enquiry from andrew-cooper site">
-               <input type="hidden" name="_captcha" value="false">
-               <input type="hidden" name="_template" value="table">
-               <input type="hidden" name="_next" value="https://ranatahirbilal.github.io/andrew-cooper/thanks.html">
-               <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-               <div class="row">
-                  <div class="col-12">
-                     <div class="form-group">
-                        <label for="ac-name">Your name</label>
-                        <input id="ac-name" class="form-control" type="text" placeholder="Full name" required autocomplete="name" name="Name">
-                     </div>
-                  </div>
-                  <div class="col-12">
-                     <div class="form-group">
-                        <label for="ac-org">Organisation <span class="ac-opt">optional</span></label>
-                        <input id="ac-org" class="form-control" type="text" placeholder="Firm, company or court" autocomplete="organization" name="Organisation">
-                     </div>
-                  </div>
-                  <div class="col-12">
-                     <div class="form-group">
-                        <label for="ac-email">Email address</label>
-                        <input id="ac-email" class="form-control" type="email" placeholder="you@example.com" required autocomplete="email" inputmode="email" name="Email">
-                     </div>
-                  </div>
-                  <div class="col-12">
-                     <div class="form-group">
-                        <label for="ac-sub">Subject</label>
-                        <select id="ac-sub" class="form-control" name="Subject">
-                           <option>Speaking engagement</option>
-                           <option>Board or advisory service</option>
-                           <option>Mentorship</option>
-                           <option>Media or panel</option>
-                           <option>General enquiry</option>
-                        </select>
-                     </div>
-                  </div>
-                  <div class="col-12">
-                     <div class="form-group">
-                        <label for="ac-msg">Message</label>
-                        <textarea id="ac-msg" class="form-control" placeholder="A few lines about what you have in mind." name="Message" rows="6" required aria-describedby="ac-msg-help"></textarea>
-                        <p id="ac-msg-help" class="ac-help">Messages are delivered by email. Nothing is stored on this site.</p>
-                     </div>
-                  </div>
-                  <button type="submit" class="btn button btn-rounded red-btn btn-hvr-red ac-submit">SEND MESSAGE</button>
-               </div>
-            </form>
+            <!-- Needs Client Confirmation: contact email. The form was removed on 2026-09-17 because it
+                 delivered to the site builder, not to Andrew. Restore it from
+                 _backups/claude-79-emdash-fix-2026-09-17.zip once his address is known. -->
+            <p class="ac-help ac-pending">A direct way to reach Andrew is being set up and will appear here shortly.</p>
+            <p class="ac-help">Speaking engagements, board and advisory service, mentorship, media and panels.</p>
          </div>
          <div class="col-lg-6 col-md-12 col-sm-12 img-section">
             <img src="celebrity/img/portrait-contact.jpg" width="900" height="1000" loading="lazy" decoding="async" alt="Andrew Charles Cooper">
